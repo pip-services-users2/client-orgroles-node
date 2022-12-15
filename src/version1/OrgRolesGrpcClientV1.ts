@@ -27,12 +27,11 @@ export class OrgRolesGrpcClientV1 extends GrpcClient implements IOrgRolesClientV
             if (response.error != null)
                 throw OrgRolesGrpcConverterV1.toError(response.error);
 
+            timing.endTiming();
             return response ? response.getUserIdsList() : null;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -49,12 +48,11 @@ export class OrgRolesGrpcClientV1 extends GrpcClient implements IOrgRolesClientV
             if (response.error != null)
                 throw OrgRolesGrpcConverterV1.toError(response.error);
 
+            timing.endTiming();
             return response ? response.getUserIds() : null;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
     
@@ -72,13 +70,12 @@ export class OrgRolesGrpcClientV1 extends GrpcClient implements IOrgRolesClientV
             if (response.error != null)
                 throw OrgRolesGrpcConverterV1.toError(response.error);
 
+            timing.endTiming();
             return response ? OrgRolesGrpcConverterV1.toUserRolesList(response.getUserRolesList()) : null;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
-        }       
+        }     
     }
 
     public async grantOrgRole(correlationId: string, orgId: string, userId: string, role: string): Promise<string[]> {
@@ -96,12 +93,11 @@ export class OrgRolesGrpcClientV1 extends GrpcClient implements IOrgRolesClientV
             if (response.error != null)
                 throw OrgRolesGrpcConverterV1.toError(response.error);
 
+            timing.endTiming();
             return response ? response.getRolesList() : null;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -120,12 +116,11 @@ export class OrgRolesGrpcClientV1 extends GrpcClient implements IOrgRolesClientV
             if (response.error != null)
                 throw OrgRolesGrpcConverterV1.toError(response.error);
 
+            timing.endTiming();
             return response ? response.getRolesList() : null;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
     
@@ -143,12 +138,11 @@ export class OrgRolesGrpcClientV1 extends GrpcClient implements IOrgRolesClientV
             if (response.error != null)
                 throw OrgRolesGrpcConverterV1.toError(response.error);
 
+            timing.endTiming();
             return response ? response.getOrgId() : null;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 

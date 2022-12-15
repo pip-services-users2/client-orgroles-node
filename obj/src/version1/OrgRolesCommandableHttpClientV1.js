@@ -20,110 +20,50 @@ class OrgRolesCommandableHttpClientV1 extends pip_services3_rpc_nodex_1.Commanda
     }
     getOrganizationUsers(correlationId, orgId) {
         return __awaiter(this, void 0, void 0, function* () {
-            let timing = this.instrument(correlationId, 'org_roles.get_organization_users');
-            try {
-                return yield this.callCommand('get_organization_users', correlationId, {
-                    org_id: orgId
-                });
-            }
-            catch (err) {
-                timing.endFailure(err);
-                throw err;
-            }
-            finally {
-                timing.endTiming();
-            }
+            return yield this.callCommand('get_organization_users', correlationId, {
+                org_id: orgId
+            });
         });
     }
     getOrganizationAdmins(correlationId, orgId) {
         return __awaiter(this, void 0, void 0, function* () {
-            let timing = this.instrument(correlationId, 'org_roles.get_organization_admins');
-            try {
-                return yield this.callCommand('get_organization_admins', correlationId, {
-                    org_id: orgId
-                });
-            }
-            catch (err) {
-                timing.endFailure(err);
-                throw err;
-            }
-            finally {
-                timing.endTiming();
-            }
+            return yield this.callCommand('get_organization_admins', correlationId, {
+                org_id: orgId
+            });
         });
     }
     getOrganizationUserRoles(correlationId, orgId, paging) {
         return __awaiter(this, void 0, void 0, function* () {
-            let timing = this.instrument(correlationId, 'org_roles.get_organization_user_roles');
-            try {
-                return yield this.callCommand('get_organization_user_roles', correlationId, {
-                    org_id: orgId,
-                    paging: paging
-                });
-            }
-            catch (err) {
-                timing.endFailure(err);
-                throw err;
-            }
-            finally {
-                timing.endTiming();
-            }
+            return yield this.callCommand('get_organization_user_roles', correlationId, {
+                org_id: orgId,
+                paging: paging
+            });
         });
     }
     grantOrgRole(correlationId, orgId, userId, role) {
         return __awaiter(this, void 0, void 0, function* () {
-            let timing = this.instrument(correlationId, 'org_roles.grant_org_role');
-            try {
-                return yield this.callCommand('grant_org_role', correlationId, {
-                    org_id: orgId,
-                    user_id: userId,
-                    user_role: role
-                });
-            }
-            catch (err) {
-                timing.endFailure(err);
-                throw err;
-            }
-            finally {
-                timing.endTiming();
-            }
+            return yield this.callCommand('grant_org_role', correlationId, {
+                org_id: orgId,
+                user_id: userId,
+                user_role: role
+            });
         });
     }
     revokeOrgRole(correlationId, orgId, userId, role) {
         return __awaiter(this, void 0, void 0, function* () {
-            let timing = this.instrument(correlationId, 'org_roles.revoke_org_role');
-            try {
-                return yield this.callCommand('revoke_org_role', correlationId, {
-                    org_id: orgId,
-                    user_id: userId,
-                    user_role: role
-                });
-            }
-            catch (err) {
-                timing.endFailure(err);
-                throw err;
-            }
-            finally {
-                timing.endTiming();
-            }
+            return yield this.callCommand('revoke_org_role', correlationId, {
+                org_id: orgId,
+                user_id: userId,
+                user_role: role
+            });
         });
     }
     grantDemoOrganizationUserRole(correlationId, userId, language) {
         return __awaiter(this, void 0, void 0, function* () {
-            let timing = this.instrument(correlationId, 'org_roles.grant_demo_organization_user_role');
-            try {
-                return yield this.callCommand('grant_demo_organization_user_role', correlationId, {
-                    user_id: userId,
-                    language: language
-                });
-            }
-            catch (err) {
-                timing.endFailure(err);
-                throw err;
-            }
-            finally {
-                timing.endTiming();
-            }
+            return yield this.callCommand('grant_demo_organization_user_role', correlationId, {
+                user_id: userId,
+                language: language
+            });
         });
     }
 }

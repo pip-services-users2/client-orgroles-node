@@ -22,14 +22,13 @@ class OrgRolesDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient {
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'org_roles.get_organization_users');
             try {
-                return yield this._controller.getOrganizationUsers(correlationId, orgId);
+                let res = yield this._controller.getOrganizationUsers(correlationId, orgId);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -37,14 +36,13 @@ class OrgRolesDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient {
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'org_roles.get_organization_admins');
             try {
-                return yield this._controller.getOrganizationAdmins(correlationId, orgId);
+                let res = yield this._controller.getOrganizationAdmins(correlationId, orgId);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -52,14 +50,13 @@ class OrgRolesDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient {
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'org_roles.get_organization_user_roles');
             try {
-                return yield this._controller.getOrganizationUserRoles(correlationId, orgId, paging);
+                let res = yield this._controller.getOrganizationUserRoles(correlationId, orgId, paging);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -67,14 +64,13 @@ class OrgRolesDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient {
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'org_roles.grant_org_role');
             try {
-                return yield this._controller.grantOrgRole(correlationId, orgId, userId, role);
+                let res = yield this._controller.grantOrgRole(correlationId, orgId, userId, role);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -82,14 +78,13 @@ class OrgRolesDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient {
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'org_roles.revoke_org_role');
             try {
-                return yield this._controller.revokeOrgRole(correlationId, orgId, userId, role);
+                let res = yield this._controller.revokeOrgRole(correlationId, orgId, userId, role);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -97,14 +92,13 @@ class OrgRolesDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient {
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'org_roles.grant_demo_organization_user_role');
             try {
-                return yield this._controller.grantDemoOrganizationUserRole(correlationId, userId, language);
+                let res = yield this._controller.grantDemoOrganizationUserRole(correlationId, userId, language);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }

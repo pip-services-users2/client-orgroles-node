@@ -27,14 +27,12 @@ class OrgRolesGrpcClientV1 extends pip_services3_grpc_nodex_1.GrpcClient {
                 let response = yield this.call('get_organization_users', correlationId, request);
                 if (response.error != null)
                     throw OrgRolesGrpcConverterV1_1.OrgRolesGrpcConverterV1.toError(response.error);
+                timing.endTiming();
                 return response ? response.getUserIdsList() : null;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -47,14 +45,12 @@ class OrgRolesGrpcClientV1 extends pip_services3_grpc_nodex_1.GrpcClient {
                 let response = yield this.call('get_organization_admins', correlationId, request);
                 if (response.error != null)
                     throw OrgRolesGrpcConverterV1_1.OrgRolesGrpcConverterV1.toError(response.error);
+                timing.endTiming();
                 return response ? response.getUserIds() : null;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -68,14 +64,12 @@ class OrgRolesGrpcClientV1 extends pip_services3_grpc_nodex_1.GrpcClient {
                 let response = yield this.call('get_organization_user_roles', correlationId, request);
                 if (response.error != null)
                     throw OrgRolesGrpcConverterV1_1.OrgRolesGrpcConverterV1.toError(response.error);
+                timing.endTiming();
                 return response ? OrgRolesGrpcConverterV1_1.OrgRolesGrpcConverterV1.toUserRolesList(response.getUserRolesList()) : null;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -90,14 +84,12 @@ class OrgRolesGrpcClientV1 extends pip_services3_grpc_nodex_1.GrpcClient {
                 let response = yield this.call('grant_org_role', correlationId, request);
                 if (response.error != null)
                     throw OrgRolesGrpcConverterV1_1.OrgRolesGrpcConverterV1.toError(response.error);
+                timing.endTiming();
                 return response ? response.getRolesList() : null;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -112,14 +104,12 @@ class OrgRolesGrpcClientV1 extends pip_services3_grpc_nodex_1.GrpcClient {
                 let response = yield this.call('revoke_org_role', correlationId, request);
                 if (response.error != null)
                     throw OrgRolesGrpcConverterV1_1.OrgRolesGrpcConverterV1.toError(response.error);
+                timing.endTiming();
                 return response ? response.getRolesList() : null;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -133,14 +123,12 @@ class OrgRolesGrpcClientV1 extends pip_services3_grpc_nodex_1.GrpcClient {
                 let response = yield this.call('grant_demo_organization_user_role', correlationId, request);
                 if (response.error != null)
                     throw OrgRolesGrpcConverterV1_1.OrgRolesGrpcConverterV1.toError(response.error);
+                timing.endTiming();
                 return response ? response.getOrgId() : null;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
