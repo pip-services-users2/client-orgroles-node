@@ -5,7 +5,7 @@ import { CommandableHttpClient } from 'pip-services3-rpc-nodex';
 import { UserRolesV1 } from './UserRolesV1';
 import { IOrgRolesClientV1 } from './IOrgRolesClientV1';
 
-export class OrgRolesHttpClientV1 extends CommandableHttpClient implements IOrgRolesClientV1 {       
+export class OrgRolesCommandableHttpClientV1 extends CommandableHttpClient implements IOrgRolesClientV1 {       
     
     constructor(config?: any) {
         super('v1/org_roles');

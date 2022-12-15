@@ -9,12 +9,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.OrgRolesLambdaClientV1 = void 0;
+exports.OrgRolesCommandableHttpClientV1 = void 0;
 const pip_services3_commons_nodex_1 = require("pip-services3-commons-nodex");
-const pip_services3_aws_nodex_1 = require("pip-services3-aws-nodex");
-class OrgRolesLambdaClientV1 extends pip_services3_aws_nodex_1.CommandableLambdaClient {
+const pip_services3_rpc_nodex_1 = require("pip-services3-rpc-nodex");
+class OrgRolesCommandableHttpClientV1 extends pip_services3_rpc_nodex_1.CommandableHttpClient {
     constructor(config) {
-        super('org_roles');
+        super('v1/org_roles');
         if (config != null)
             this.configure(pip_services3_commons_nodex_1.ConfigParams.fromValue(config));
     }
@@ -127,5 +127,5 @@ class OrgRolesLambdaClientV1 extends pip_services3_aws_nodex_1.CommandableLambda
         });
     }
 }
-exports.OrgRolesLambdaClientV1 = OrgRolesLambdaClientV1;
-//# sourceMappingURL=OrgRolesLambdaClientV1.js.map
+exports.OrgRolesCommandableHttpClientV1 = OrgRolesCommandableHttpClientV1;
+//# sourceMappingURL=OrgRolesCommandableHttpClientV1.js.map

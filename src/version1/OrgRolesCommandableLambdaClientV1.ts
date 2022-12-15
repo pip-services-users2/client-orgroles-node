@@ -5,7 +5,7 @@ import { CommandableLambdaClient } from 'pip-services3-aws-nodex';
 import { UserRolesV1 } from './UserRolesV1';
 import { IOrgRolesClientV1 } from './IOrgRolesClientV1';
 
-export class OrgRolesLambdaClientV1 extends CommandableLambdaClient implements IOrgRolesClientV1 {
+export class OrgRolesCommandableLambdaClientV1 extends CommandableLambdaClient implements IOrgRolesClientV1 {
 
     constructor(config?: any) {
         super('org_roles');

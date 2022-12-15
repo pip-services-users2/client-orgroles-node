@@ -8,7 +8,7 @@ import { OrganizationsNullClientV1 } from 'client-organizations-node';
 
 import { OrgRolesController } from 'service-orgroles-node';
 import { OrgRolesHttpServiceV1 } from 'service-orgroles-node';
-import { OrgRolesHttpClientV1 } from '../../src/version1/OrgRolesHttpClientV1';
+import { OrgRolesCommandableHttpClientV1 } from '../../src/version1/OrgRolesCommandableHttpClientV1';
 import { OrgRolesClientFixtureV1 } from './OrgRolesClientFixtureV1';
 
 var httpConfig = ConfigParams.fromTuples(
@@ -17,9 +17,9 @@ var httpConfig = ConfigParams.fromTuples(
     "connection.port", 3000
 );
 
-suite('OrgRolesRestClientV1', ()=> {
+suite('OrgRolesCommandableRestClientV1', ()=> {
     let service: OrgRolesHttpServiceV1;
-    let client: OrgRolesHttpClientV1;
+    let client: OrgRolesCommandableHttpClientV1;
     let fixture: OrgRolesClientFixtureV1;
 
     suiteSetup(async () => {
@@ -39,7 +39,7 @@ suite('OrgRolesRestClientV1', ()=> {
         controller.setReferences(references);
         service.setReferences(references);
 
-        client = new OrgRolesHttpClientV1();
+        client = new OrgRolesCommandableHttpClientV1();
         client.setReferences(references);
         client.configure(httpConfig);
 
