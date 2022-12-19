@@ -7,7 +7,7 @@ import { RolesNullClientV1 } from 'client-roles-node';
 import { OrganizationsNullClientV1 } from 'client-organizations-node';
 
 import { OrgRolesController } from 'service-orgroles-node';
-import { OrgRolesHttpServiceV1 } from 'service-orgroles-node';
+import { OrgRolesCommandableHttpServiceV1 } from 'service-orgroles-node';
 import { OrgRolesCommandableHttpClientV1 } from '../../src/version1/OrgRolesCommandableHttpClientV1';
 import { OrgRolesClientFixtureV1 } from './OrgRolesClientFixtureV1';
 
@@ -18,7 +18,7 @@ var httpConfig = ConfigParams.fromTuples(
 );
 
 suite('OrgRolesCommandableRestClientV1', ()=> {
-    let service: OrgRolesHttpServiceV1;
+    let service: OrgRolesCommandableHttpServiceV1;
     let client: OrgRolesCommandableHttpClientV1;
     let fixture: OrgRolesClientFixtureV1;
 
@@ -26,7 +26,7 @@ suite('OrgRolesCommandableRestClientV1', ()=> {
         let logger = new ConsoleLogger();
         let controller = new OrgRolesController();
 
-        service = new OrgRolesHttpServiceV1();
+        service = new OrgRolesCommandableHttpServiceV1();
         service.configure(httpConfig);
 
         let references: References = References.fromTuples(
@@ -34,7 +34,7 @@ suite('OrgRolesCommandableRestClientV1', ()=> {
             new Descriptor('service-roles', 'client', 'null', 'default', '1.0'), new RolesNullClientV1(),
             new Descriptor('service-organizations', 'client', 'null', 'default', '1.0'), new OrganizationsNullClientV1(),
             new Descriptor('service-orgroles', 'controller', 'default', 'default', '1.0'), controller,
-            new Descriptor('service-orgroles', 'service', 'http', 'default', '1.0'), service
+            new Descriptor('service-orgroles', 'service', 'commandable-http', 'default', '1.0'), service
         );
         controller.setReferences(references);
         service.setReferences(references);
